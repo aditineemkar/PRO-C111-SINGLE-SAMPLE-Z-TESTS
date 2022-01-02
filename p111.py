@@ -28,7 +28,7 @@ firststdDevStart, firststdDevEnd = mean - stdDev, mean + stdDev
 secondstdDevStart, secondstdDevEnd = mean - (2*stdDev), mean + (2*stdDev)
 thirdstdDevStart, thirdstdDevEnd = mean - (3*stdDev), mean + (3*stdDev)
 df = pd.read_csv("medium_data.csv")
-data = df["id"].to_list()
+data = df["reading_time"].to_list()
 meanOfSample = statistics.mean(data)
 print("Mean of Sampling Distribution", meanOfSample)
 fig = ff.create_distplot([meanlist],["Population Mean"], show_hist = False)
