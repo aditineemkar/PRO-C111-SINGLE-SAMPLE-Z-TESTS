@@ -4,8 +4,8 @@ import random
 import csv
 import pandas as pd 
 import plotly.graph_objects as go 
-df = pd.read_csv("medium_data.csv")
-data = df["id"].to_list()
+df = pd.read_csv("Projects/p111/medium_data.csv")
+data = df["reading_time"].to_list()
 datamean = statistics.mean(data)
 datastdDev = statistics.stdev(data)
 print("Mean of the data is {}".format(datamean))
@@ -27,7 +27,7 @@ mean = statistics.mean(meanlist)
 firststdDevStart, firststdDevEnd = mean - stdDev, mean + stdDev
 secondstdDevStart, secondstdDevEnd = mean - (2*stdDev), mean + (2*stdDev)
 thirdstdDevStart, thirdstdDevEnd = mean - (3*stdDev), mean + (3*stdDev)
-df = pd.read_csv("medium_data.csv")
+df = pd.read_csv("Projects/p111/medium_data.csv")
 data = df["reading_time"].to_list()
 meanOfSample = statistics.mean(data)
 print("Mean of Sampling Distribution", meanOfSample)
